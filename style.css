@@ -4,32 +4,50 @@
 :root {
   --logo-font: "Playfair Display", serif;
   --second-font: "Fira Sans", sans-serif;
+  --textcolor-primary: #f1f1f1;
 }
 
 * {
   margin: 0px;
   padding: 0px;
 }
-body {
+
+::-webkit-scrollbar {
   background-color: #040506;
-  font-family: system-ui;
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dce0e176;
+  border-radius: 100rem;
+}
+
+body {
+  font-family: var(--second-font);
+  color: var(--textcolor-primary);
+  background-color: #040506;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  width: 100vw;
 }
+
 .container {
   width: 80vw;
   margin: auto;
   transition: 0.5s;
 }
+
 header {
   position: relative;
   top: 0px;
   left: 0px;
   background: url(./image/2021-rolls-royce-black-badge-ghost-10k.jpg);
   background-attachment: fixed;
-  background-size: cover;
+  background-position: center center;
+  background-size: cover !important;
   height: 100vh;
   width: 100vw;
 }
@@ -37,8 +55,40 @@ header {
 .logo {
   font-family: var(--logo-font);
   color: #dce0e1;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 2.5rem;
+  -webkit-animation: slide-in-bottom 1200ms cubic-bezier(0.315, 0.61, 0.455, 1)
+    both;
+  animation: slide-in-bottom 800ms cubic-bezier(0.315, 0.61, 0.455, 1) both;
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(170px);
+    transform: translateY(170px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(170px);
+    transform: translateY(170px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.logo svg {
+  fill: #fff;
 }
 
 .header-layer {
@@ -47,23 +97,18 @@ header {
   background: #0000006d;
   padding: 4rem;
 }
+
 .shopping {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(
-    222deg,
-    rgba(65, 68, 75, 0.7) 0%,
-    rgba(102, 102, 102, 0.7) 48%,
-    rgba(140, 140, 140, 0.7) 100%
-  );
+  background-color: #4e5564;
   padding: 0.5rem;
   margin-left: auto;
   margin-right: auto;
   position: sticky;
   top: 1rem;
   z-index: 1000;
-  width: 50vw;
   border: none;
   border-radius: 50rem;
   margin-top: 3rem;
@@ -189,4 +234,11 @@ header {
 }
 .listCard .count {
   margin: 0 10px;
+}
+
+.width-50 {
+  width: 50vw;
+}
+.width-90 {
+  width: 90vw;
 }

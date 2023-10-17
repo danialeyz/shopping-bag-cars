@@ -6,6 +6,7 @@ let body = document.querySelector("body");
 let total = document.querySelector(".total");
 let quantity = document.querySelector(".quantity");
 
+window.addEventListener("DOMContentLoaded", menuAnim);
 openShopping.addEventListener("click", () => {
   body.classList.add("active");
 });
@@ -109,4 +110,12 @@ function changeQuantity(key, quantity) {
     listCards[key].price = quantity * products[key].price;
   }
   reloadCard();
+}
+
+function menuAnim() {
+  if (window.screenY > 740) {
+    openShopping.classList.remove("width-50");
+  } else if (window.screenY < 740) {
+    openShopping.classList.add("width-50");
+  }
 }
