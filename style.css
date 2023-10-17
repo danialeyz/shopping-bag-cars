@@ -20,6 +20,7 @@
 ::-webkit-scrollbar-thumb {
   background-color: #dce0e176;
   border-radius: 100rem;
+  width: 0.3rem;
 }
 
 body {
@@ -36,7 +37,6 @@ body {
 
 .container {
   width: 80vw;
-  margin: auto;
   transition: 0.5s;
 }
 
@@ -44,15 +44,20 @@ header {
   position: relative;
   top: 0px;
   left: 0px;
-  background: url(./image/2021-rolls-royce-black-badge-ghost-10k.jpg);
-  background-attachment: fixed;
-  background-position: center center;
+  background: url(./image/2021-rolls-royce-black-badge-ghost-10k.jpg) no-repeat
+    center bottom;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
   background-size: cover !important;
+  background-attachment: fixed;
   height: 100vh;
   width: 100vw;
+  margin: 0px !important;
 }
 
 .logo {
+  margin: 2rem;
   font-family: var(--logo-font);
   color: #dce0e1;
   font-weight: 200;
@@ -87,6 +92,15 @@ header {
   }
 }
 
+.header-button {
+  text-decoration: none;
+  width: 1rem;
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 47.5%;
+}
+
 .logo svg {
   fill: #fff;
 }
@@ -95,7 +109,6 @@ header {
   height: 100%;
   width: 100%;
   background: #0000006d;
-  padding: 4rem;
 }
 
 .shopping {
@@ -129,13 +142,17 @@ header {
   padding: 3px 10px;
 }
 .list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
-  row-gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
   margin-top: 50px;
 }
 .list .item {
+  flex: 1;
+  min-width: 17rem;
   text-align: center;
   border: 2rem;
   background-color: #222326;
@@ -143,6 +160,7 @@ header {
   letter-spacing: 1px;
   border-radius: 20px;
   transition-duration: 300ms;
+  max-width: 23rem;
 }
 
 .item:hover {
@@ -241,4 +259,21 @@ header {
 }
 .width-90 {
   width: 90vw;
+}
+
+@media screen and (max-width: 470px) {
+  header {
+    background: url(./image/background-header-mobile.jpeg) no-repeat center
+      bottom;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    background-attachment: fixed;
+  }
+
+  .logo svg {
+    width: 40vw !important;
+    height: auto !important;
+  }
 }
