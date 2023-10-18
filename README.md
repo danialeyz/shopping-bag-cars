@@ -1,6 +1,6 @@
 ## Priview
-[](https://github.com/danialeyz/shopping-bag-cars/blob/ca6e5a1ac3fd20aa7616c5fe8c83104b8d9a7959/Screen%20Shot%201402-07-26%20at%2019.22.07.png)
-[](https://github.com/danialeyz/shopping-bag-cars/blob/ca6e5a1ac3fd20aa7616c5fe8c83104b8d9a7959/Screen%20Shot%201402-07-26%20at%2019.25.48.png)
+![Readme](https://github.com/danialeyz/shopping-bag-cars/blob/ca6e5a1ac3fd20aa7616c5fe8c83104b8d9a7959/Screen%20Shot%201402-07-26%20at%2019.22.07.png)
+![Readme](https://github.com/danialeyz/shopping-bag-cars/blob/ca6e5a1ac3fd20aa7616c5fe8c83104b8d9a7959/Screen%20Shot%201402-07-26%20at%2019.25.48.png)
 
 ## Table of Contents
 - [Overview](#overview)
