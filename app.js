@@ -6,7 +6,6 @@ let body = document.querySelector("body");
 let total = document.querySelector(".total");
 let quantity = document.querySelector(".quantity");
 
-window.addEventListener("DOMContentLoaded", menuAnim);
 openShopping.addEventListener("click", () => {
   body.classList.add("active");
 });
@@ -18,87 +17,76 @@ let products = [
   {
     id: 1,
     name: "PRODUCT NAME 1",
-    image: "1.webp",
-    price: 120000,
+    image: "1.png",
+    price: 1200,
   },
   {
     id: 2,
     name: "PRODUCT NAME 2",
-    image: "2.webp",
-    price: 120000,
+    image: "2.png",
+    price: 1400,
   },
   {
     id: 3,
     name: "PRODUCT NAME 3",
-    image: "3.jpg",
-    price: 220000,
+    image: "3.png",
+    price: 2200,
   },
   {
     id: 4,
     name: "PRODUCT NAME 4",
-    image: "4.webp",
-    price: 123000,
+    image: "4.png",
+    price: 1230,
   },
   {
     id: 5,
     name: "PRODUCT NAME 5",
-    image: "5.webp",
-    price: 320000,
+    image: "5.png",
+    price: 3200,
   },
   {
     id: 6,
     name: "PRODUCT NAME 6",
-    image: "6.webp",
-    price: 120000,
+    image: "6.png",
+    price: 1200,
   },
 
   {
     id: 7,
     name: "PRODUCT NAME 6",
-    image: "6.webp",
-    price: 120000,
-  },
-  {
-    id: 7,
-    name: "PRODUCT NAME 6",
-    image: "7.webp",
-    price: 120000,
+    image: "7.png",
+    price: 1780,
   },
   {
     id: 8,
     name: "PRODUCT NAME 6",
-    image: "8.webp",
-    price: 120000,
+    image: "8.png",
+    price: 1289,
   },
-
   {
     id: 9,
     name: "PRODUCT NAME 6",
-    image: "9.webp",
-    price: 120000,
-  },
-
-  {
-    id: 10,
-    name: "PRODUCT NAME 6",
-    image: "10.webp",
-    price: 120000,
+    image: "9.png",
+    price: 1369,
   },
 ];
+
 let listCards = [];
 function initApp() {
   products.forEach((value, key) => {
     let newDiv = document.createElement("div");
     newDiv.classList.add("item");
     newDiv.innerHTML = `
-            <img src="image/${value.image}">
-            <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add To Card</button>`;
+            <div class="image-area"><img src="image/${value.image}"></div>
+            <div class="item-content"> <div class="title">${value.name}</div>
+            <div class="price">${value.price.toLocaleString() + "$"}</div>
+            <button onclick="addToCard(${key})">Add To Card</button></div>
+  `;
     list.appendChild(newDiv);
   });
 }
 initApp();
+
 function addToCard(key) {
   if (listCards[key] == null) {
     // copy product form list to list card
@@ -107,6 +95,7 @@ function addToCard(key) {
   }
   reloadCard();
 }
+
 function reloadCard() {
   listCard.innerHTML = "";
   let count = 0;
@@ -119,7 +108,7 @@ function reloadCard() {
       newDiv.innerHTML = `
                 <div><img src="image/${value.image}"/></div>
                 <div>${value.name}</div>
-                <div>${value.price.toLocaleString()}</div>
+                <div>${value.price.toLocaleString() + "$"}</div>
                 <div>
                     <button onclick="changeQuantity(${key}, ${
         value.quantity - 1
@@ -143,12 +132,4 @@ function changeQuantity(key, quantity) {
     listCards[key].price = quantity * products[key].price;
   }
   reloadCard();
-}
-
-function menuAnim() {
-  if (window.screenY > 740) {
-    openShopping.classList.remove("width-50");
-  } else if (window.screenY < 740) {
-    openShopping.classList.add("width-50");
-  }
 }
