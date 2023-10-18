@@ -20,27 +20,4 @@ The Online Car Parts Shop - Shopping Bag Example project demonstrates the implem
 - Calculate the total price of items in the shopping bag
 - Display a summary of the items in the shopping bag
 
-## Installation
-To run this project locally, follow these steps:
-
-1. Clone the repository: `git clone https://github.com/your-username/your-repository.git`
-2. Navigate to the project directory: `cd your-repository`
-3. Install the dependencies: `npm install`
-
-## Usage
-To start the web application, run the following command:
-
-bash
-npm start
-
-
-Open your web browser and visit `http://localhost:3000` to access the application.
-
-## Contributing
-Contributions are welcome! If you would like to contribute to this project, please follow these guidelines:
-
-1. Fork the repository
-2. Create a new branch: `git checkout -b feature/your-feature`
-3. Make your changes and commit them: `git commit -m 'Add your feature'`
-4. Push to the branch: `git push origin feature/your-feature`
-5. Submit a pull request
+I'd Love to hear from you ❤️ !
