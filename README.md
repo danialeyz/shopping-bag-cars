@@ -235,19 +235,7 @@ shopping-card/
 │   ├── Components             # Reusable UI elements
 │   └── Responsive Breakpoints # Media queries
 │
-├── 🖼️ image/                  # Static assets directory
-│   ├── products/              # Product images
-│   ├── icons/                 # UI icons and logos
-│   └── backgrounds/           # Banner and hero images
-│
-├── 📚 docs/                   # Documentation
-│   ├── API.md                 # API reference
-│   ├── CONTRIBUTING.md        # Contribution guidelines
-│   └── CHANGELOG.md           # Version history
-│
-├── 🧪 tests/                  # Test suite (if applicable)
-│   ├── unit/                  # Unit tests
-│   └── integration/           # Integration tests
+├── 🖼️ image/                  # Static assets directory       
 │
 ├── 📖 README.md               # Project documentation
 ├── 📋 LICENSE                 # License information
@@ -272,41 +260,21 @@ cd shopping-card
 # Open in your default browser
 open index.html
 
-# Or use a local server (recommended)
-python -m http.server 8000
-# Then visit: http://localhost:8000
-```
-
-### Using a Development Server
-
-For the best development experience, use a local server:
-
-#### Option 1: Python
-
-```bash
-# Python 3
-python -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
-```
-
-#### Option 2: Node.js
-
-```bash
-# Install http-server globally
-npm install -g http-server
-
-# Run server
-http-server -p 8000
-```
-
-#### Option 3: VS Code Live Server
+# VS Code Live Server
 
 1. Install "Live Server" extension
 2. Right-click on `index.html`
 3. Select "Open with Live Server"
+```
 
+For the best development experience, use a local server:
+
+#### Node.js
+
+```bash
+# Install dependecies
+Npm install
+```
 ---
 
 ## 📖 Usage Guide
@@ -320,29 +288,6 @@ http-server -p 8000
 5. **Remove Items**: Click the trash icon
 6. **Checkout**: Click "Proceed to Checkout" button
 
-### Code Integration
-
-```javascript
-// Add custom product programmatically
-const customProduct = {
-  id: 'custom-001',
-  name: 'Custom Product',
-  price: 29.99,
-  img: '/image/products/custom.jpg'
-};
-
-cartManager.addItem(customProduct);
-
-// Listen to cart changes
-cartManager.subscribe((cart) => {
-  console.log('Cart updated:', cart);
-  console.log('Total:', cartManager.getTotal());
-});
-
-// Get current cart state
-const currentCart = cartManager.cart;
-const totalPrice = cartManager.getTotal();
-```
 
 ---
 
