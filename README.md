@@ -15,28 +15,6 @@
 
 ---
 
-## 📋 Table of Contents
-
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [System Architecture](#-system-architecture)
-- [Technical Stack](#-technical-stack)
-- [Project Structure](#-project-structure)
-- [Implementation Details](#-implementation-details)
-- [Installation](#-installation)
-- [Usage Guide](#-usage-guide)
-- [Browser Compatibility](#-browser-compatibility)
-- [Performance Metrics](#-performance-metrics)
-- [API Reference](#-api-reference)
-- [Roadmap](#-roadmap)
-- [Contributing](#-contributing)
-- [Testing](#-testing)
-- [Security](#-security)
-- [License](#-license)
-- [Acknowledgments](#-acknowledgments)
-
----
-
 ## 🎯 Overview
 
 **Shopping Card** is a production-ready, client-side shopping cart solution engineered for performance, maintainability, and scalability. Built entirely with vanilla JavaScript, it demonstrates enterprise-grade front-end architecture without the overhead of modern frameworks.
