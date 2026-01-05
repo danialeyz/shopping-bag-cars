@@ -1,0 +1,17 @@
+{
+  "name": "danial-garage-module-spa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:css": "postcss frontend/src/input.css -o frontend/dist/styles.css",
+    "watch:css": "postcss frontend/src/input.css -o frontend/dist/styles.css --watch",
+    "build": "npm run build:css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10",
+    "postcss": "^8.4.41",
+    "postcss-cli": "^11.0.0",
+    "autoprefixer": "^10.4.20"
+  }
+}

@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body { height: 100%; }
+  body {
+    @apply font-sans text-white bg-bg overflow-x-hidden antialiased;
+    background: radial-gradient(circle at top, #151520 0, #050509 55%);
+  }
+  a { @apply no-underline; }
+}
+
+@layer components {
+  .container { @apply mx-auto max-w-[1200px] px-5; }
+  .pill { @apply inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-muted; }
+  .btn { @apply inline-flex items-center justify-center rounded-full px-5 py-2 text-[11px] font-medium uppercase tracking-[0.14em] transition; }
+  .btn-primary { @apply btn text-[#111119] bg-gradient-to-br from-[#f3c96a] to-accent hover:brightness-110; }
+  .btn-ghost { @apply btn border border-white/15 text-white hover:border-white/30 hover:bg-white/5; }
+  .card { @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur shadow-glow; }
+  .input { @apply w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none focus:border-accent/60; }
+  .nav-link { @apply text-[10px] sm:text-[11px] lg:text-[12px] uppercase tracking-[0.18em] text-muted hover:text-white; }
+}
